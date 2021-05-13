@@ -1,0 +1,19 @@
+<div>
+    <h2>One way Binding</h2>
+
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<div>
+    <h2>Two way Binding</h2>
+    <input type="text" [(ngModel)]="color" name="username" />
+</div>
+
+<div>
+    <h2>Event listener</h2>
+    <input type="text" (blur)="onLoseFocus($event)" name="username" /> <!--(blur)-->
+</div>
+
+<p [appDemo]="color">demo-directive-pipe works!</p>
